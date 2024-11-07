@@ -12909,7 +12909,7 @@ Current version indicated by LITEVER below.
 		{
 			let st = get_instruct_starttag(true);
 			let et = get_instruct_endtag(true);
-			seqs = [st, et];
+			seqs = [st, et, st.replace(/:/g, '\n'), et.replace(/:/g, '\n')];
 			if(localsettings.inject_chatnames_instruct)
 			{
 				if(localsettings.chatname!="")
